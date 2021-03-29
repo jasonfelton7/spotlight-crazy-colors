@@ -4,7 +4,7 @@ let canvas_dist;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     noStroke();
-    
+    frameRate(10);
     // Use the dist() function to calculate the diagonal distance across the canvas
     canvas_dist = dist(0, 0, width, height);
 }
@@ -22,7 +22,7 @@ function draw() {
 
             // Reassign size to be proportional to the size of the canvas
             size = (size / canvas_dist) * 70;
-            fill(random(255), random(255), random(255));
+            fill(random(0, 155));
 
             // Set width and height of ellipse to size variable
             ellipse(i, j, size, size);
